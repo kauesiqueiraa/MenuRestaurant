@@ -1,11 +1,16 @@
+import { useState } from 'react';
+
 import Search from 'components/Search';
+import Filters from 'components/Filters';
+
 import styles from './Menu.module.scss';
 import { ReactComponent as Logo } from 'assets/logo.svg';
-import { useState } from 'react';
+import Sort from 'components/Sort';
 
 export default function Menu() {
   const [search, setSearch] = useState("");
-
+  const [filter, setFilter] = useState<number | null>(null);
+  const [sort, setSort] = useState("");
 
   return (
     <main>
@@ -24,6 +29,17 @@ export default function Menu() {
           search={search}
           setSearch={setSearch}
         />
+
+        <div className={styles.section_menu__filters}>
+          <Filters
+            filter={filter}
+            setFilter={setFilter}
+          />
+          <Sort
+            sort={sort}
+            setSort={setSort}
+          />
+        </div>
       </section>
     </main>
   )

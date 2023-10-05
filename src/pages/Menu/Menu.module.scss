@@ -67,4 +67,14 @@
     font-size: 3rem;
     margin-bottom: 30px;
   }
+
+  &__filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
