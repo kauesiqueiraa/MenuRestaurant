@@ -6,6 +6,7 @@ import Filters from 'components/Filters';
 import styles from './Menu.module.scss';
 import { ReactComponent as Logo } from 'assets/logo.svg';
 import Sort from 'components/Sort';
+import Itens from 'components/Itens';
 
 export default function Menu() {
   const [search, setSearch] = useState("");
@@ -15,7 +16,7 @@ export default function Menu() {
   return (
     <main>
       <nav className={styles.menu}>
-        <Logo />
+        <Logo width={100} />
       </nav>
       <header className={styles.header}>
         <div className={styles.header__text}>
@@ -40,6 +41,11 @@ export default function Menu() {
             setSort={setSort}
           />
         </div>
+        <Itens
+          search={search}
+          filter={filter}
+          sort={sort}
+        />
       </section>
     </main>
   )
