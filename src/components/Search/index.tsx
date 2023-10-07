@@ -1,6 +1,6 @@
 import React from "react";
-import styles from './Search.module.scss';
-import { CgSearch } from 'react-icons/cg';
+import styles from "./Search.module.scss";
+import { CgSearch } from "react-icons/cg";
 
 interface Props {
   search: string,
@@ -22,5 +22,5 @@ export default function Search({ search, setSearch }: Props) {
         color="#4C4D5E"
       />
     </div>
-  )
+  );
 }

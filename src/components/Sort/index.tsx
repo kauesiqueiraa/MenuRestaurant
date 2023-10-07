@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import styles from './Sort.module.scss';
-import options from './options.json';
-import classNames from 'classnames';
+import styles from "./Sort.module.scss";
+import options from "./options.json";
+import classNames from "classnames";
 
-import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
 interface Props {
   sort: string;
@@ -43,5 +43,5 @@ export default function Sort({ sort, setSort }: Props) {
         ))}
       </div>
     </button >
-  )
+  );
 }

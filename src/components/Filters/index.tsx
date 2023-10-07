@@ -1,7 +1,7 @@
-import React from 'react';
-import filters from './filters.json';
-import styles from './Filters.module.scss';
-import classNames from 'classnames';
+import React from "react";
+import filters from "./filters.json";
+import styles from "./Filters.module.scss";
+import classNames from "classnames";
 
 type Option = typeof filters[0];
 
@@ -25,7 +25,7 @@ export default function Filters({ filter, setFilter }: Props) {
           onClick={() => selectFilter(option)}
           className={classNames({
             [styles.filters__filter]: true,
-            [styles['filters__filter--active']]: filter === option.id,
+            [styles["filters__filter--active"]]: filter === option.id,
           })}
         // `${styles.filters__filter} ${filter === option.id ? styles["filters__filter--active"] : ""}`
         >
@@ -33,5 +33,5 @@ export default function Filters({ filter, setFilter }: Props) {
         </button>
       ))}
     </div>
-  )
+  );
 }

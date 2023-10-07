@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-import Item from './Item';
-import itens from './itens.json';
+import Item from "./Item";
+import itens from "./itens.json";
 
-import styles from './Itens.module.scss';
+import styles from "./Itens.module.scss";
 
 interface Props {
   search: string;
@@ -16,25 +16,25 @@ export default function Itens(props: Props) {
   const { search, filter, sort } = props;
 
   function testSearch(title: string) {
-    const regex = new RegExp(search, 'i');
+    const regex = new RegExp(search, "i");
     return regex.test(title);
   }
 
   function testFilter(id: number) {
     if (filter !== null) return filter === id;
-    return true
+    return true;
   }
 
   function order(newList: typeof itens) {
     switch (sort) {
-      case 'portion':
-        return sortPropsGrowing(newList, 'size')
-      case 'amount_of_peaples':
-        return sortPropsGrowing(newList, 'serving')
-      case 'price':
-        return sortPropsGrowing(newList, 'price')
-      default:
-        return newList;
+    case "portion":
+      return sortPropsGrowing(newList, "size");
+    case "amount_of_peaples":
+      return sortPropsGrowing(newList, "serving");
+    case "price":
+      return sortPropsGrowing(newList, "price");
+    default:
+      return newList;
     }
   }
 
@@ -43,7 +43,7 @@ export default function Itens(props: Props) {
     props: "size" | "serving" | "price"
   ) => {
     return list.sort((a, b) => (a[props] > b[props] ? 1 : -1));
-  }
+  };
 
   // function order(newList: typeof itens) {
   //   switch (sort) {
@@ -61,7 +61,7 @@ export default function Itens(props: Props) {
   useEffect(() => {
     const newList = itens.filter(item => testSearch(item.title) && testFilter(item.category.id));
     setList(order(newList));
-  }, [search, filter, sort])
+  }, [search, filter, sort]);
 
   return (
     <div className={styles.itens}>
@@ -71,5 +71,5 @@ export default function Itens(props: Props) {
         />
       ))}
     </div>
-  )
+  );
 }

@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import Search from 'components/Search';
-import Filters from 'components/Filters';
+import Search from "components/Search";
+import Filters from "components/Filters";
 
-import styles from './Menu.module.scss';
-import { ReactComponent as Logo } from 'assets/logo.svg';
-import Sort from 'components/Sort';
-import Itens from 'components/Itens';
+import styles from "./Menu.module.scss";
+import { ReactComponent as Logo } from "assets/logo.svg";
+import Sort from "components/Sort";
+import Itens from "components/Itens";
 
 export default function Menu() {
   const [search, setSearch] = useState("");
@@ -48,5 +48,5 @@ export default function Menu() {
         />
       </section>
     </main>
-  )
+  );
 }

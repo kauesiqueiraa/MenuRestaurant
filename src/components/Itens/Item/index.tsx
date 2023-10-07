@@ -1,6 +1,6 @@
-import styles from './Item.module.scss';
-import itens from './../itens.json';
-import classNames from 'classnames';
+import styles from "./Item.module.scss";
+import itens from "./../itens.json";
+import classNames from "classnames";
 
 type Props = typeof itens[0];
 
@@ -31,7 +31,7 @@ export default function Item(props: Props) {
 
           <div className={styles.item__amount_of_peaples}>
             Serve {serving}
-            {serving === 1 ? ' pessoa' : ' pessoas'}
+            {serving === 1 ? " pessoa" : " pessoas"}
           </div>
 
           <div className={styles.item__price}>
@@ -40,5 +40,5 @@ export default function Item(props: Props) {
         </div>
       </div>
     </div>
-  )
+  );
 }
