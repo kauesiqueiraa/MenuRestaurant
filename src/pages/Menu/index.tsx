@@ -8,6 +8,8 @@ import styles from "./Menu.module.scss";
 import Sort from "components/Sort";
 import Itens from "components/Itens";
 
+import stylesTheme from "styles/Theme.module.scss";
+
 export default function Menu() {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState<number | null>(null);
@@ -15,7 +17,7 @@ export default function Menu() {
 
   return (
     <section className={styles.section_menu}>
-      <h3 className={styles.section_menu__title}>Cardápio</h3>
+      <h3 className={stylesTheme.section_menu__title}>Cardápio</h3>
       <Search
         search={search}
         setSearch={setSearch}
