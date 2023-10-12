@@ -1,8 +1,7 @@
+import { Outlet } from "react-router-dom";
+
 import styles from "./DefaultPage.module.scss";
 import stylesTheme from "styles/Theme.module.scss";
-
-
-import { Outlet } from "react-router-dom";
 
 export default function DefaultPage() {
   return (

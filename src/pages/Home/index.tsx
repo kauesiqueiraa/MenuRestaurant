@@ -4,10 +4,19 @@ import styles from "./Home.module.scss";
 import stylesTheme from "styles/Theme.module.scss";
 
 import OurHome from "assets/Home/ourHome.png";
+import { useNavigate } from "react-router-dom";
+import { Dish } from "types/Dish";
 
 export default function Home() {
   let recommendedDishes = [...itens];
   recommendedDishes = recommendedDishes.sort(() => 0.5 - Math.random()).splice(0, 3);
+
+  const navigate = useNavigate();
+
+  function redirectToDetals(dish: Dish) {
+    navigate(`/dish/${dish.id}`, { state: { ...dish } });
+  }
+
   return (
     <section>
       <h3 className={stylesTheme.title}>
@@ -21,7 +30,10 @@ export default function Home() {
               <img src={item.photo} alt={item.title} />
             </div>
 
-            <button className={styles.recommend__button}>
+            <button
+              className={styles.recommend__button}
+              onClick={() => redirectToDetals(item)}
+            >
               Ver mais
             </button>
           </div>

@@ -4,6 +4,7 @@ import Item from "./Item";
 import itens from "data/itensMenu.json";
 
 import styles from "./Itens.module.scss";
+import { ItensMenu } from "types/Dish";
 
 interface Props {
   search: string;
@@ -25,7 +26,7 @@ export default function Itens(props: Props) {
     return true;
   }
 
-  function order(newList: typeof itens) {
+  function order(newList: ItensMenu) {
     switch (sort) {
     case "portion":
       return sortPropsGrowing(newList, "size");
