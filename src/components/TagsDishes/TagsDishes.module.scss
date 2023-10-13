@@ -1,7 +1,7 @@
 @import "styles/_variables.scss";
 @import "styles/_breakpoints.scss";
 
-$pastes: #d73b3b;
+$pastas: #d73b3b;
 $meets: #30201e;
 $combos: #e6c864;
 $vegans: #80aa40;
@@ -34,8 +34,8 @@ $vegans: #80aa40;
     justify-content: center;
     padding: 10px 30px;
 
-    &__pastes {
-      background-color: $pastes;
+    &__pastas {
+      background-color: $pastas;
       color: white;
     }
 
@@ -54,8 +54,8 @@ $vegans: #80aa40;
   }
 
   &__portion,
-    &__amount_of_peaples,
-    &__price {
+  &__amount_of_peaples,
+  &__price {
       align-items: center;
       display: flex;
       font-size: 1.25rem;

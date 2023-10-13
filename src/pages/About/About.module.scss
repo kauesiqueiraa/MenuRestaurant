@@ -1,3 +1,5 @@
+@import "styles/_breakpoints.scss";
+
 .aboutUs {
   display: flex;
   margin-bottom: 50px;
@@ -15,6 +17,16 @@
       font-family: "Josefin Sans", sans-serif;
     }
   }
+  img {
+   
+   width: 100%;
+   object-fit: cover;
+
+  }
+
+  @media (max-width: $mobile) {
+    flex-wrap: wrap;
+  }
 
 }
 
@@ -31,5 +43,6 @@
       width: 100%;
       border-radius: 5px;
     }
+
   }
 }

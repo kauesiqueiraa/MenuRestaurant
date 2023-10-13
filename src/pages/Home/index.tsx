@@ -25,9 +25,13 @@ export default function Home() {
 
       <div className={styles.recommended}>
         {recommendedDishes.map(item => (
-          <div key={item.id} className={styles.recommend}>
+          <div key={item.id} className={styles.recommend} onClick={() => redirectToDetals(item)}>
             <div className={styles.recommend__photo}>
               <img src={item.photo} alt={item.title} />
+            </div>
+
+            <div>
+              <h1 className={styles.recommend__title}>{item.title}</h1>
             </div>
 
             <button
